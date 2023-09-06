@@ -1,2 +1,2 @@
 #!/bin/bas
-head /etc/passwd
+head /etc/passwd | tail  -1
