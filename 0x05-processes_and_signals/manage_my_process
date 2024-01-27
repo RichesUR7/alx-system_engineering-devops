@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-#Writes a message to a file
-while :
-do
-	echo "I am alive!" >> /tmp/my_process
-	sleep 2
+# This script writes "I am alive!" to /tmp/my_process indefinitely
+
+while true; do
+    echo "I am alive!" >> /tmp/my_process
+    sleep 2
 done
