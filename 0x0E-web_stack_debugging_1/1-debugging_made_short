@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script ensures that Nginx is running and listening on port 80
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+service nginx restart
+kill "$(pgrep 'nginx' | head -1)"
