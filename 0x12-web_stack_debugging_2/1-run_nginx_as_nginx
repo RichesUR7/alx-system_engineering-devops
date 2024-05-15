@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# Reconfigure Nginx server
+
+# Check if the nginx user exists and create it if it doesn't
+if ! id -u nginx > /dev/null 2>&1; then
+    sudo adduser --system --no-create-home --shell /bin/false --group --disabled-login nginx
+fi
+
+sudo service nginx stop
+
+chown nginx:nginx /etc/nginx/nginx.conf
+
+chmod 600 /etc/nginx/nginx.conf
+
+# Change nginx configuration to run as nginx user
+sudo -u nginx sed -i "s/^#user .*$/user nginx nginx;/" /etc/nginx/nginx.conf
+
+# Change nginx configuration to listen on port 8080
+sudo -u nginx sed -i 's/80/8080/g' /etc/nginx/sites-available/default
+
+# Check if port 8080 is open on UFW, if not, open it
+#if ! sudo ufw status | grep -q '8080/tcp'
+#then
+#    sudo ufw allow 8080/tcp
+#fi
+
+# Check if the apache2 service is running, and if it is, stop it and kill any remaining apache2 processes
+#if service --status-all | grep -Fq 'apache2'; then
+#    sudo service apache2 stop
+#    sleep 2
+#    for pid in $(pidof apache2); do
+#        sudo kill -9 "$pid"
+#    done
+#fi
+pkill apache2
+sudo -u nginx service nginx restart
