@@ -1,0 +1,25 @@
+**Issue Summary:**
+- **Duration:** The deployment debacle took place on April 3rd, 2024, from 9:00 AM to 1:00 PM (UTC).
+- **Impact:** Our AirBnB clone experienced a hiccup in static asset deployment, resulting in a 404 party for users trying to access images and stylesheets. Approximately 30% of users were affected by the outage.
+- **Root Cause:** A misconfiguration in the deployment script led to the static assets not being properly copied to the production server, causing them to be inaccessible to users.
+
+**Timeline:**
+- **9:00 AM:** An engineer noticed anomalies in the deployed application, specifically missing images and stylesheets, triggering investigation.
+- **9:15 AM:** Initial suspicion fell on network issues, leading to futile attempts to diagnose connection problems.
+- **9:30 AM:** Realizing the issue persisted locally, attention shifted to the deployment process, suspecting a glitch in the script.
+- **10:00 AM:** The incident was escalated to senior engineers and the DevOps team as efforts to rectify the issue locally failed.
+- **11:00 AM:** Investigations revealed a misconfiguration in the deployment script, causing static assets to be excluded from the deployment package.
+- **12:00 PM:** Corrective action began with a manual copy of static assets to the production server, temporarily resolving the issue.
+- **1:00 PM:** The deployment script was patched to fix the misconfiguration, ensuring proper inclusion of static assets in future deployments.
+
+**Root Cause and Resolution:**
+The root cause of the outage was a misconfiguration in the deployment script, which omitted copying static assets to the production server. The issue was resolved by manually copying the missing assets and patching the deployment script to prevent recurrence.
+
+**Corrective and Preventative Measures:**
+- **Deployment Process Enhancement:** Review and refine the deployment script to ensure proper handling of static assets.
+- **Automated Testing:** Implement automated tests to verify the integrity of static assets during deployment.
+- **Monitoring and Alerts:** Enhance monitoring systems to detect anomalies in deployed applications and trigger alerts for rapid response.
+- **Documentation:** Update deployment procedures and document troubleshooting steps for similar incidents in the future.
+
+With these measures in place, we aim to bolster the reliability of our AirBnB clone and minimize the risk of similar deployment mishaps disrupting user experiences.
+

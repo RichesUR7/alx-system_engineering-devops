@@ -1,0 +1,24 @@
+**Issue Summary:**
+- **Duration:** The deployment debacle unfolded like a comedy of errors on April 3rd, 2024, from 9:00 AM to 1:00 PM (UTC).
+- **Impact:** Our AirBnB clone experienced a static asset blackout, leaving users wandering through a digital void of missing images and stylesheets. Approximately 30% of users found themselves in a 404 maze.
+- **Root Cause:** Picture this: our deployment script had a case of selective amnesia, forgetting to pack the static assets for the journey to the production server.
+
+**Timeline:**
+- **9:00 AM:** The saga began when an engineer noticed the absence of images and stylesheets, setting off alarm bells louder than a rock concert.
+- **9:15 AM:** Initial suspicions pointed fingers at the network, leading to an impromptu blame game with the ISP.
+- **9:30 AM:** As the mystery deepened, our intrepid engineers turned their gaze inward, suspecting foul play in the deployment script.
+- **10:00 AM:** The cavalry arrived as senior engineers and the DevOps team joined the quest for missing assets, armed with debugging tools and a healthy dose of caffeine.
+- **11:00 AM:** Like Sherlock Holmes unraveling a mystery, investigations revealed the culprit—a misconfigured deployment script leaving static assets behind like forgotten luggage at the airport.
+- **12:00 PM:** With users still lost in the digital abyss, we took matters into our own hands, manually ferrying the missing assets to the production server like digital superheroes.
+- **1:00 PM:** Crisis averted! The deployment script was patched up, ensuring future deployments wouldn't leave static assets stranded on the digital roadside.
+
+**Root Cause and Resolution:**
+The root cause of the outage was a misconfigured deployment script suffering from selective memory loss, omitting to include static assets in the deployment package. We resolved the issue by manually ferrying the missing assets and patching the deployment script to prevent future forgetfulness.
+
+**Corrective and Preventative Measures:**
+- **Script Therapy:** Conduct a thorough review and therapy session for the deployment script, ensuring it remembers to pack all assets for the journey.
+- **Automated Sanity Checks:** Implement automated checks to verify the mental state of the deployment script before it embarks on its digital journey.
+- **Monitoring and Cheerleading:** Enhance monitoring systems to cheerlead the deployment script, ensuring it stays on track and doesn't wander off into the digital wilderness.
+
+With these measures in place, we're confident our AirBnB clone will continue to provide users with seamless experiences, free from the pitfalls of forgetful deployment scripts and missing assets.
+
